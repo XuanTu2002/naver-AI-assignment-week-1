@@ -1,11 +1,13 @@
 import React from "react";
 
-function Square({"Your code here"}) {
+const Square = ({ onClick, value, isHighlighted, disabled }) => {
+  const buttonClass = `square${isHighlighted ? " square--highlight" : ""}`;
+
   return (
-    <button className={"square"} onClick={"Your code here"}>
-      "Your code here"
+    <button className={buttonClass} onClick={onClick} disabled={disabled}>
+      {value}
     </button>
   );
-}
+};
 
 export default Square;
